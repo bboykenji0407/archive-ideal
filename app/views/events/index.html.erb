@@ -1,0 +1,17 @@
+<%= link_to '予約追加', new_event_path %> <%#←link_to追記%>
+
+<%= month_calendar events: @events do |date, events| %>
+  <%= date.day %>
+
+  <%  events.each do |event| %>
+    <div>
+      <%#= event.name %>
+    </div>
+    <div>
+      <%=  event.created_at.to_s(:time) %>
+    </div>
+  <% end %>
+<% end %>
+<%= link_to 'ログアウト画面へ', root_path%><%= link_to '管理者専用ページ',  rails_admin_path %>
+
+  

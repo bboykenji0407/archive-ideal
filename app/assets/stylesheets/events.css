@@ -1,0 +1,20 @@
+.body {
+  height: auto; 
+}
+
+.title {
+  margin: 20px;
+  color: gold;
+}
+.time {
+  margin: 20px;
+}
+
+.content {
+  margin: 20px;
+}
+
+.submit {
+  margin: 20px;
+}
+
