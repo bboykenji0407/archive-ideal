@@ -58,3 +58,7 @@ gem 'simple_calendar', '~> 2.0'
 
 gem 'rails_admin', '~> 2.0.0.beta'
 gem 'rails-i18n'
+
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
+
