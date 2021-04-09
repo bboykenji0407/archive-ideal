@@ -1,14 +1,15 @@
-<%= link_to '予約追加', new_event_path %> <%#←link_to追記%>
-
+<%= link_to 'ご予約はこちら', new_event_path %> 
+<div class="edit">
+  <p>予約変更、詳細確認は名前をクリックしてください</p>
 <%= month_calendar events: @events do |date, events| %>
   <%= date.day %>
 
   <%  events.each do |event| %>
     <div>
-      <%#= event.name %>
+      <%= link_to event.name, event_path(event.id) %><span>様</span>
     </div>
     <div>
-      <%=  event.created_at.to_s(:time) %>
+      <%=  event.start_time.to_s(:time) %>
     </div>
   <% end %>
 <% end %>

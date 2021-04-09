@@ -1,0 +1,31 @@
+<h1>ご予約詳細</h1>
+
+  <% if user_signed_in? && current_user.id == @event.user_id %>
+    <%= form_with(model: @event, local: true) do |form| %>
+
+    <div class="title">
+      <%= form.label :name, @event.name %>
+    </div>
+
+    <div class="time">
+      <p>予約時間<%= form.label :start_time, @event.start_time.to_s(:time) %></p>
+    </div>
+    <div class="content">
+      <p>ご希望内容<%= form.label :remarks, @event.remarks %></p>
+    </div>
+      <div class="img-upload">
+        <p>参考画像<%= image_tag @event.image, id:"design-image" %></p>
+      </div>
+    <div class="edit">
+      <%= link_to "予約を修正する", edit_event_path %>:<%= link_to "予約を削除する", event_path, method: :destroy %>
+    </div>
+    <div class="listing">
+      <%= link_to '予約カレンダーへ', events_path %>
+    </div>
+    <% end %>
+  <% else %>
+    <P>他のユーザーの予約詳細は閲覧出来ません</p>
+    <%= link_to "戻る", events_path%>
+  <% end %>
+  
+  

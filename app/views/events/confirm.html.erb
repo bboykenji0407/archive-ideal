@@ -1,0 +1,24 @@
+<h1>確認画面</h1>
+
+  <div class="#">
+   <p>名前: <%= @event.name%></p>
+  </div>
+  <div class="#">
+    <p>希望のデザイン: <%= @event.remarks %></p>
+  </div>
+  <div class="#">
+    <p>予約時間: <%= @event.start_time %></p>
+  </div>
+  <div class="#">
+    <p>画像: <%= @event.image %>
+
+
+
+  <%= form_with(model: @event, id: 'charge-form', local: true) do |f| %>
+    <%= f.hidden_field :name %>
+    <%= f.hidden_field :remarks %>
+    <%= f.hidden_field :start_time %>
+    <%= f.hidden_field :image %>
+    <%= f.submit "予約する"  %>
+    <%= f.submit "戻る", name: :back %>
+  <% end%>

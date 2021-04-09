@@ -1,4 +1,7 @@
 class EventsController < ApplicationController
+
+  before_action :set_event,     only: [:edit, :show, :update]
+  
   def index
     @events = Event.all
   end
@@ -8,13 +11,32 @@ class EventsController < ApplicationController
   end
 
   def create
-    Event.create(event_parameter)
-    redirect_to root_path
+    @event = Event.create(event_parameter)
+    if @event.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
+  def edit
+  end
+  
+  def show
+  end
+  def update
+    if @event.update(event_parameter)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
   private
 
   def event_parameter
     params.require(:event).permit(:name, :image, :remarks, :start_time, :time).merge(user_id: current_user.id)
+  end
+  def set_event
+    @event = Event.find(params[:id])
   end
 end
