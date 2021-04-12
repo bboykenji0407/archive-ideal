@@ -33,7 +33,7 @@ Things you may want to cover:
 | tell_num  | string     | null: false |
 | age        | integer    | null: false |
 
-# Reservationsテーブル
+# Eventsテーブル
 
 |  column    |  type  |    option   |
 |------------|--------|-------------|
