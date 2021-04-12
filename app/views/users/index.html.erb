@@ -1,5 +1,20 @@
 
-  <h1>いらっしゃいませ！</h1>
-  <%= link_to "予約カレンダーへ", events_path %>
-  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete%>
-  <%= link_to 'アカウント変更', edit_user_registration_path %>
+  <div class="users-wrapper">
+    <div class="users-inner">
+      <h1 class="users-title">Welcome Archive Ideal</h1>
+        <div class="go-calender">
+          <%= link_to "予約カレンダーへ", events_path %>
+        </div>
+        <div class="greeting">
+          <p>いらっしゃいませ!
+          Archive Idealへようこそ！<br>
+          ちょっとしたお時間で、ちょっとしたリフレッシュ気分をいかがでしょうか！<br>
+          お店のコンセプトは、理想を、成し遂げる。<br>
+          旦那がおもむろに考えました！</p>
+        </div>
+        <div class="log-item">
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete,  class: "btn btn-default"%>
+          <%= link_to 'アカウント変更', edit_user_registration_path, class: "btn btn-default" %>
+        </div>
+    </div>
+  </div>

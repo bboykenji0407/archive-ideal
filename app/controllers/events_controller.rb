@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 
-  before_action :set_event,     only: [:edit, :show, :update]
+  before_action :set_event,     only: [:edit, :show, :update, :destroy ]
   
   def index
     @events = Event.all
@@ -29,6 +29,12 @@ class EventsController < ApplicationController
       redirect_to root_path
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if @event.destroy
+      redirect_to events_path
     end
   end
   private

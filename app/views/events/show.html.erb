@@ -17,7 +17,7 @@
         <p>参考画像<%= image_tag @event.image, id:"design-image" %></p>
       </div>
     <div class="edit">
-      <%= link_to "予約を修正する", edit_event_path %>:<%= link_to "予約を削除する", event_path, method: :destroy %>
+      <%= link_to "予約を修正する", edit_event_path %>:<%= link_to "予約を削除する", event_path, method: :delete %>
     </div>
     <div class="listing">
       <%= link_to '予約カレンダーへ', events_path %>

@@ -7,13 +7,17 @@ class Event < ApplicationRecord
     validates :remarks
     validates :start_time, uniqueness: { message: 'は他のユーザーが予約しています' }
   end
-
+  validate :start_check
   validate :date_before_start
   validate :start_time_not_sunday
   validate :start_time_not_saturday
   
   def date_before_start
     errors.add(:start_time, "は過去の日付を選択出来ません") if start_time < Date.today
+  end
+
+  def start_check
+    errors.add(:start_time, "は現在の日時より遅い時間を選択してください") if self.start_time < Time.now
   end
 
   def start_time_not_sunday

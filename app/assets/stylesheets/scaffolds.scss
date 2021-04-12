@@ -1,14 +1,76 @@
-body {
+.users-wrapper {
   color: rgb(15, 14, 17);
-  margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  height: 300px;
-  width: 80%;
-  //background: url('../assets/images/umi.jpg') top left / cover no-repeat;
-
+  height: 100vh;
+  width: 100%;
+  background: url('../assets/images/suidou.jpg') top left / cover no-repeat;
+  .users-inner{
+    padding: 30px 0;
+    text-align: center;
+  }
+  .users-title{
+    font-size: 24px;
+    text-align: center;
+  }
 }
+
+.log-item{
+  display: flex;
+  justify-content: center;
+}
+.btn-default {
+  display: block;
+  width: 200px;
+  padding: 20px 0;
+  border: 1px solid #ccc;
+  background: #f1e767;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fdfbfb), to(#ebedee));
+  background: -webkit-linear-gradient(top, #fdfbfb 0%, #ebedee 100%);
+  background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+  -webkit-box-shadow: inset 1px 1px 1px #fff;
+  box-shadow: inset 1px 1px 1px #fff;
+}
+.btn-default + .btn-default{
+  margin-left: 50px;
+}
+.greeting{
+  p {
+    text-align: center;
+    margin: 200px 0;
+    animation: fadeIn 1.2s ease-in-out;  
+  }
+}
+
+@keyframes fadeIn {
+  0%{
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// .box{
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+//   height: 100vh;
+// }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.go-calender a{
+  color: rgb(8, 7, 24);
+}
+
 
 table ,table-striped {
   width: 20%;
@@ -25,18 +87,18 @@ pre {
   font-size: 11px;
 }
 
-a {
-  color: #000;
+// a {
+//   color: #000;
 
-  &:visited {
-    color: #666;
-  }
+//   &:visited {
+//     color: #666;
+//   }
 
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
-}
+//   &:hover {
+//     color: #fff;
+//     background-color: #000;
+//   }
+// }
 
 th {
   padding-bottom: 5px;
@@ -89,3 +151,14 @@ label {
   display: block;
 }
 
+@media screen and (min-width:480px) { 
+    /*　画面サイズが480pxからはここを読み込む　*/
+ 
+}
+@media screen and (min-width:768px) and ( max-width:1024px) {
+    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+}
+@media screen and (min-width:1024px) {
+    /*　画面サイズが1024pxからはここを読み込む　*/
+ 
+}
