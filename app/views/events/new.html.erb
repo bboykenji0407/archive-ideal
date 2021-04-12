@@ -1,34 +1,39 @@
-<h1>予約フォーム</h1>
 
-<%= form_with(model: @event, local: true) do |form| %>
-  <%= render 'shared/error_messages', model: form.object %>
+<div class="new-events-wrapper">
+  <div class="new-events-inner">
+    <h1>予約フォーム</h1>
+    <div class="new-events-form">
+        <%= form_with(model: @event, local: true) do |form| %>
+        <%= render 'shared/error_messages', model: form.object %>
+          <div class="new-title">
+            <%#= form.label :name, '名前' %>
+            <%= form.text_field :name, class: "input", placeholder: "名前を入力"%>
+          </div>
 
-  <div class="title">
-    <%= form.label :name, '名前' %>
-    <%= form.text_field :name %>
-  </div>
+          <div class="new-time">
+            <%= form.label :start_time, '予約希望時間を入力してください。(分数は、00or30分を選択)' %>
+            <%= form.datetime_select :start_time %>
+          </div>
 
-  <div class="time">
-    <%= form.label :start_time, '予約希望時間を入力してください。(分数は、00or30分でお願いいたします)' %>
-    <%= form.datetime_select :start_time %>
-  </div>
-
-  <div class="content">
-    <%= form.label :remarks, '希望のデザインなど、ご指定ください(必須)' %>
-    <%= form.text_field :remarks %>
-  </div>
-   <div class="img-upload">
-     <div class="weight-bold-text">
-      </div>
-      <div class="click-upload">
-        <p>希望デザインの画像を添付してください。(必須)</p>
-        <%= form.file_field :image, id:"design-image" %>
-      </div>
+          <div class="new-content">
+            <%#= form.label :remarks %>
+            <%= form.text_field :remarks, placeholder:'希望のデザイン入力欄(必須)' %>
+          </div>
+          <div class="img-upload">
+            <div class="weight-bold-text">
+              </div>
+              <div class="click-upload">
+                <p>希望デザインの画像を添付してください。(必須)</p>
+                <%= form.file_field :image, id:"design-image" %>
+              </div>
+            </div>
+          <div class="submit">
+            <%= form.submit "予約する", class: "btn-gradient"%>
+          </div>
+          <div class="listing">
+            <%= link_to '予約カレンダー', events_path %>
+          </div>
+        <% end %>
     </div>
-  <div class="submit">
-    <%= form.submit "予約する" %>
   </div>
-  <div class="listing">
-    <%= link_to '予約カレンダーへ', events_path %>
-  </div>
-<% end %>
+</div>

@@ -13,6 +13,7 @@
   .users-title{
     font-size: 24px;
     text-align: center;
+    padding: 5px;
   }
 }
 
@@ -166,26 +167,32 @@ label {
 .events-wrapper {
   background: url('../assets/images/wood.jpg') top left / cover no-repeat;
   justify-content: center;
-  height: 100%;
+  height: 100vh;
   text-align: center;
   .events-inner {
+    width: 180%;
     a.btn-gradient {
       border-radius: 100vh;
       padding: 3px;
       background-color: yellow;
+      background-image: -webkit-linear-gradient(left, #f3e8ee 40%, #c2e73c 100%);
+      background-image: linear-gradient(90deg, #c8f1b0 40%, #1feb8c 100%);
+      text-align: center;
+      
     }
   }
 }
 .calender-list {
   .simple-calendar {
     background-color: white;
-    justify-content: center;
+    display: block;
   }
   width: 80%;
   text-align: center;
 }
 .edit {
   color: rgb(247, 241, 241);
+  width: 50%;
 }
 .events-footer a{
   padding: 0 20px;
@@ -193,3 +200,136 @@ label {
   background-color: yellowgreen;
   border-radius: 100vh;
 }
+
+.go-calender {
+  .btn {
+    border-radius: 100vh;
+    padding: 1px;
+    margin: 2px;
+  }
+}
+@keyframes fadeInUpAnime {
+  70%{
+    transform: translateY(0px);
+    opacity: 2;
+  }
+  0%{
+    transform: translateY(50);
+    opacity: 0;
+  }
+}
+
+.new-events-wrapper {
+  height: 100vh;
+  background: url('../assets/images/nail.jpg') top left / cover no-repeat;
+  text-align: center; 
+  .new-events-inner{
+    line-height: 60px;
+    opacity: 0.5;
+    animation: fadeInUpAnime 1.8s ease-in-out; 
+    .submit .btn-gradient{
+      border-radius: 100vh;
+      padding: 5px;
+      background-color: yellow;
+      background-image: -webkit-linear-gradient(left, #f3e8ee 40%, #c2e73c 100%);
+      background-image: linear-gradient(90deg, #c8f1b0 40%, #1feb8c 100%);
+      text-align: center;
+    } 
+  }
+  .input {
+    width: 10%;
+  }
+  .new-content input{
+    width: 40%;
+  }
+  
+    
+}
+
+select::-ms-expand {
+	display: none;
+}
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin-bottom: 20px;
+	padding: 5px 15px 5px 8px;
+	font-size: 93%;
+	line-height: 1.1em;
+	border-radius: 5px;
+	border: none;
+	background-image: url(./images/icon_arrow.svg);
+	background-repeat: no-repeat;
+	background-size: 12px 10px;
+	background-position: right 10px center;
+	background-color: #d6e8f8;
+
+}
+.event-show {
+  color: white;
+  height: 100vh;
+  padding: 50px;
+  text-align: center;
+  background: url('../assets/images/tumiki.jpg') top left / cover no-repeat;
+  .img-upload p{
+    color: white;
+    text-align: center;
+    width: 30%;
+  }
+
+  .event-show .event-edit {
+    color: white;
+  }
+  a {
+    color: white;
+  }
+  .other-user .btn-gradient{
+    color: white;
+    margin: 50px;
+  }
+}
+
+.field_with_errors {
+  width: 70%;
+  position: relative;
+  
+  display: inline-block;
+  color: #e46f5d;
+  font-weight: 400;
+}
+.error-alert ul{
+  list-style: none;
+}
+.field_with_errors:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 5px;
+}
+
+#error_explanation {
+  margin: 20px 0;
+  padding: 20px 30px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+}
+#error_explanation h2 {
+  margin-bottom: 10px;
+  color: #f59688;
+  font-size: 14px;
+}
+#error_explanation {
+  margin: 0;
+  padding-left: 17px;
+  list-style: square;
+}
+#error_explanation li {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
