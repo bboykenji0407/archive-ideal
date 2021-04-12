@@ -162,3 +162,34 @@ label {
     /*　画面サイズが1024pxからはここを読み込む　*/
  
 }
+
+.events-wrapper {
+  background: url('../assets/images/wood.jpg') top left / cover no-repeat;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  .events-inner {
+    a.btn-gradient {
+      border-radius: 100vh;
+      padding: 3px;
+      background-color: yellow;
+    }
+  }
+}
+.calender-list {
+  .simple-calendar {
+    background-color: white;
+    justify-content: center;
+  }
+  width: 80%;
+  text-align: center;
+}
+.edit {
+  color: rgb(247, 241, 241);
+}
+.events-footer a{
+  padding: 0 20px;
+  margin: 0 40px;
+  background-color: yellowgreen;
+  border-radius: 100vh;
+}
