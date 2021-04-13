@@ -3,10 +3,11 @@
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-color: rgb(188, 245, 161);
-  background-image: image-url('suidou.jpg') ;
+  background-image: image-url('suidou.jpg');
+  background-size: 100%;
   .users-inner{
     padding: 30px 0;
     text-align: center;
@@ -166,13 +167,16 @@ label {
 }
 
 .events-wrapper {
-  background: url('../assets/images/wood.jpg') top left / cover no-repeat;
+  height: 100%;
+  width: 100%;
+  background-image: image-url('wood.jpg') ;
+  background-repeat: repeat-y;
+  background-size: cover;
   justify-content: center;
-  height: 100vh;
   text-align: center;
   .events-inner {
-    width: 180%;
-    
+    width: 40%;
+    padding: 2px;
     a.btn-gradient {
       border-radius: 100vh;
       padding: 3px;
@@ -233,8 +237,10 @@ label {
 }
 
 .new-events-wrapper {
-  height: 100vh;
-  background: image-url('../assets/images/nail.jpg') top left / cover no-repeat;
+  height: 120vh;
+  background-image: image-url('nail.jpg');
+  background-size: 100%;
+  background-repeat: repeat-y;
   text-align: center; 
   .new-events-inner{
     line-height: 60px;
@@ -281,9 +287,10 @@ select {
 .event-show {
   color: white;
   height: 100vh;
-  padding: 50px;
+  padding: 80px;
   text-align: center;
-  background: url('../assets/images/tumiki.jpg') top left / cover no-repeat;
+  background-image: image-url('tumiki.jpg');
+  background-size: 100%;
   .img-upload p{
     color: white;
     text-align: center;
@@ -347,9 +354,9 @@ select {
 }
 
 .event-edit-wrapper {
-  height: 100vh;
+  
   color: white;
   padding: 50px;
-  background: url('../assets/images/hondana.jpg') top left / cover no-repeat;
-
+  background-image: image-url('hondana.jpg');
+  background-size: 100%;
 }
