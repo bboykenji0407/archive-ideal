@@ -1,41 +1,38 @@
 
+<div class="event-edit-wrapper">
+  <h1>予約変更</h1>
   <% if user_signed_in? && current_user.id == @event.user_id %>
-    <h1>予約変更</h1>
     <%= form_with(model: @event, local: true) do |form| %>
-
-    <div class="title">
-      <%= form.label :name, '名前' %>
-      <%= form.text_field :name %>
-    </div>
-
-    <div class="time">
-      <%= form.label :start_time, '予約希望時間を入力してください。(分数は、00or30分でお願いいたします)' %>
-      <%= form.datetime_select :start_time %>
-    </div>
-
-    <div class="content">
-      <%= form.label :remarks, '希望のデザインなど、ご指定ください(必須)' %>
+      <div class="title">
+        <%= form.label :name, '名前' %>
+        <%= form.text_field :name %>
+      </div>
+      <div class="time">
+        <%= form.label :start_time, '予約希望時間を入力してください。(分数は、00or30分でお願いいたします)' %>
+        <%= form.datetime_select :start_time %>
+      </div>
+      <div class="content">
+        <%= form.label :remarks, '希望のデザインなど、ご指定ください(必須)' %>
       <%= form.text_field :remarks %>
-    </div>
-     <div class="img-upload">
-       <div class="weight-bold-text">
-        </div>
-        <div class="click-upload">
+      </div>
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          <div class="click-upload">
           <p>希望デザインの画像を添付してください。(必須)</p>
           <%= form.file_field :image, id:"design-image" %>
         </div>
-      </div>
-    
-    <div class="submit">
-      <%= form.submit "予約を修正する" %>
-    </div>
-    <div class="listing">
-      <%= link_to '予約カレンダーへ', events_path %>
-    </div>
+        <div class="submit">
+          <%= form.submit "予約を修正する" %>
+        </div>
+        <div class="listing">
+          <%= link_to '予約カレンダーへ', events_path %>
+        </div>
     <% end %>
-  <% else %>
-    <P>他のユーザーの予約は変更出来ません</p>
-    <%= link_to "戻る", events_path%>
+    <% else %>
+      <div class="other-user">
+        <P>他のユーザーの予約は変更出来ません</p>
+        <%= link_to "戻る", events_path%>
+      </div>
   <% end %>
-  
+</div>
   

@@ -40,3 +40,4 @@ Things you may want to cover:
 | user_id    | references | foreign key: true |
 | day_time   | datetime   | null: false |
 | remarks    | text       | null: false |
+
