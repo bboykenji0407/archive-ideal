@@ -233,7 +233,7 @@ label {
 
 .new-events-wrapper {
   height: 100vh;
-  background: url('../assets/images/nail.jpg') top left / cover no-repeat;
+  background: image-url('../assets/images/nail.jpg') top left / cover no-repeat;
   text-align: center; 
   .new-events-inner{
     line-height: 60px;
