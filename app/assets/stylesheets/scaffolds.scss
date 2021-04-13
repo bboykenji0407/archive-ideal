@@ -69,7 +69,7 @@ a {
 }
 
 .go-calender a{
-  color: rgb(8, 7, 24);
+  color: rgb(235, 82, 11);
 }
 
 
@@ -121,7 +121,7 @@ div {
 
 .field_with_errors {
   padding: 2px;
-  background-color: rgb(164, 240, 101);
+  
   display: table;
 }
 
@@ -300,6 +300,7 @@ select {
 }
 .error-alert ul{
   list-style: none;
+  color: red;
 }
 .field_with_errors:after {
   content: "";

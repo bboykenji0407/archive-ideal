@@ -1,4 +1,12 @@
 ja:
-  time:
-    formats:
-      default: "%Y/%m/%d %H:%M:%S"
+ activerecord:
+  attributes:
+    event:
+      name: 名前
+      remarks: 希望のデザイン
+      start_time: 予約開始時間
+    user:
+      email: メールアドレス
+      tell_num: 電話番号
+      name: 名前
+      age: 年齢
