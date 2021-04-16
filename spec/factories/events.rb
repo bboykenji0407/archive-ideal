@@ -3,8 +3,10 @@ FactoryBot.define do
     name        {"hoge"} 
     remarks {Faker::Lorem.sentence}
     start_time {}
+    association :user
+
     after(:build) do |event|
-      event.image.attach(io: File.open('public/assets/images/image.jpg'), filename: 'test_image.png')
+     event.image.attach(io: File.open('app/assets/images/image.jpg'), filename: 'image.jpg')
     end
   end
 end

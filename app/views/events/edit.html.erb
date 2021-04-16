@@ -1,4 +1,4 @@
-
+<%#= video_tag("/assets/videos/mov_hts-samp007.mp4", :autoplay => true, :loop => true, muted: => true, style: "width:100%;")%>
 <div class="event-edit-wrapper">
   <h1>予約変更</h1>
   <% if user_signed_in? && current_user.id == @event.user_id %>

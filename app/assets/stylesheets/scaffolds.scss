@@ -171,7 +171,7 @@ label {
 .events-wrapper {
   height: 100vh;
   width: 100%;
-  background-image: image-url('wood.jpg') ;
+  background: linear-gradient(#05FBFF, #1E00FF);
   background-repeat: repeat-y;
   background-size: cover;
   justify-content: center;
@@ -258,6 +258,10 @@ label {
       border-top-right-radius: 5px;
       border-color: #aaffd5 #78ff66 #44ffb7 #c6e7b2;
     } 
+    .btn-gradient{
+      border-top-right-radius: 5px;
+      border-color: #aaffd5 #78ff66 #44ffb7 #c6e7b2;
+    }
   }
   .input {
     width: 10%;
